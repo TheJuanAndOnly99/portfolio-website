@@ -1,8 +1,9 @@
 :root {
   --mainColor: #a5a4a4;
+  --navColor: #505050;
   --secondaryColor: #fff;
 
-  --borderColor: #c1c1c1;
+  --borderColor: #131313;
 
   --mainText: black;
   --secondaryText: #4b5156;
@@ -41,7 +42,8 @@ a {
 }
 
 ul {
-  list-style: none;
+  padding: 0;
+  list-style-type: none;
 }
 
 h1 {
@@ -75,8 +77,13 @@ h6 {
   overflow: auto;
 }
 
-.main-container {
+.title-container {
   width: 1200px;
+  margin: 0 auto;
+}
+
+.main-container {
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -84,17 +91,17 @@ h6 {
   display: grid;
   text-align: center;
   align-content: center;
-  border: 2px dashed lightcoral;
   min-height: 20em;
 }
 
 .intro-wrapper {
   background-color: var(--secondaryColor);
   border: 1px solid var(--borderColor);
+  border-radius: 5px;
 
-  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0, 0.75);
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -103,22 +110,77 @@ h6 {
 }
 
 .nav-wrapper {
+  border-radius: 5px 5px 0px 0px;
   grid-area: nav-wrapper;
-  border: 1px dashed lightcoral;
+  border-bottom: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navColor);
+}
+
+#navigation {
+  margin: 0;
+  padding: 10px;
+}
+
+#navigation li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 20px;
+}
+
+#navigation .active {
+  /* background-color: #131313; */
+  border-right: 1px solid #fff;
+}
+
+/* #navigation .active a {
+  color: #fff;
+} */
+
+.dots-wrapper {
+  display: flex;
+}
+
+#dot-1 {
+  background-color: #fc6058;
+}
+
+#dot-2 {
+  background-color: #fec02f;
+}
+
+#dot-3 {
+  background-color: #2aca3e;
+}
+
+.browser-dot {
+  background-color: black;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 5px;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
 .left-column {
   grid-area: left-column;
-  border: 1px dashed lightcoral;
 }
 
 .right-column {
   grid-area: right-column;
-  border: 1px dashed lightcoral;
 }
 
 @media screen and (max-width: 1200px) {
-  .main-container {
+  .title-container {
     width: 95%;
+  }
+  .main-container {
+    width: 80%;
   }
 }
