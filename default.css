@@ -4,11 +4,15 @@
   --secondaryColor: #fff;
 
   --borderColor: #131313;
+  --secondaryBorderColor: #17a2b8;
 
   --mainText: black;
   --secondaryText: #4b5156;
 
   --themeDotBorder: #24292e;
+
+  --previewBg: rgb(251, 249, 243, 0.8);
+  --previewShadow: #f0ead6;
 }
 
 :root[color-mode="dark"] {
@@ -105,6 +109,8 @@ h6 {
   overflow: auto;
 }
 
+/* Landing page */
+
 .title-container {
   width: 1200px;
   margin: 0 auto;
@@ -114,6 +120,8 @@ h6 {
   width: 1000px;
   margin: 0 auto;
 }
+
+/* Grid and grid template area */
 
 .greeting-wrapper {
   display: grid;
@@ -135,6 +143,9 @@ h6 {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'nav-wrapper nav-wrapper' 'left-column right-column';
 }
+
+/* "Browser" section
+ Flex box */
 
 .nav-wrapper {
   border-radius: 5px 5px 0px 0px;
@@ -163,12 +174,11 @@ h6 {
   justify-content: space-between;
   margin-right: 5px;
   padding-right: 5px;
+  color: var(--linkColor);
   border-right: 1px solid #fff;
 }
 
-/* #navigation .active a {
-  color: #fff;
-} */
+/* "Top right browser buttons */
 
 .dots-wrapper {
   display: flex;
@@ -197,6 +207,8 @@ h6 {
   -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
+
+/* Light/Dark mode switch */
 
 .switch {
   position: relative;
@@ -253,7 +265,6 @@ input:checked + .slider:before {
   background-color: #000000;
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 17px;
 }
@@ -262,8 +273,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/* Profile picture section */
+
 .left-column {
   grid-area: left-column;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #profile-pic {
@@ -277,9 +292,67 @@ input:checked + .slider:before {
   border: 2px solid var(--borderColor);
 }
 
+/* Summary section */
+
 .right-column {
   grid-area: right-column;
+  display: grid;
+  align-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
+#preview-shadow {
+  background-color: var(--previewShadow);
+  width: 300px;
+  height: 180px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+/* Element positioning with relative and absolute */
+
+#preview {
+  width: 300px;
+  height: 180px;
+  border: 2px solid var(--secondaryBorderColor);
+  background-color: var(--previewBg);
+  padding: 15px;
+
+  position: relative;
+}
+
+.corner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 2px solid var(--secondaryBorderColor);
+  background-color: #fff;
+
+  position: absolute;
+}
+
+#corner-tl {
+  top: -5px;
+  left: -5px;
+}
+
+#corner-tr {
+  top: -5px;
+  right: -5px;
+}
+
+#corner-br {
+  bottom: -5px;
+  right: -5px;
+}
+
+#corner-bl {
+  bottom: -5px;
+  left: -5px;
+}
+
+/* Screen adaptability  */
 
 @media screen and (max-width: 1200px) {
   .title-container {
@@ -287,5 +360,16 @@ input:checked + .slider:before {
   }
   .main-container {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'nav-wrapper' 'left-column' 'right-column';
+  }
+
+  .right-column {
+    justify-content: center;
   }
 }
