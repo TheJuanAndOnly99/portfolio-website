@@ -171,6 +171,7 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'nav-wrapper nav-wrapper' 'left-column right-column';
+  gap: 10px;
 }
 
 /* "Browser" section
@@ -190,11 +191,12 @@ h6 {
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 
 .tabs {
   margin-left: 20px;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
 }
@@ -202,9 +204,28 @@ h6 {
 .tabs li {
   justify-content: space-between;
   margin-right: 5px;
-  padding-right: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px 5px 0 0;
   color: var(--linkColor);
-  border-right: 1px solid #fff;
+}
+
+.active-tab {
+  background-color: var(--secondaryColor);
+}
+
+.inactive-tab {
+  background-color: var(--borderColor);
+  overflow: ;
+}
+
+.fake-link {
+  color: var(--linkColor);
+}
+
+.fake-link:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 3px 0px 0px var(--secondaryBorderColor);
 }
 
 /* "Top right browser buttons */
