@@ -119,3 +119,13 @@ for (dot of browserDots) {
   dot.addEventListener('mouseover', showIconsOnHover);
   dot.addEventListener('mouseleave', hideIconsOnHover);
 }
+
+// Detect id user is on a small screen to reduce tab size
+
+function detectMob() {
+  return window.innerWidth <= 600 && window.innerHeight <= 400;
+}
+
+if (detectMob === true) {
+  summaryTab.innerHTML = 'S';
+}
