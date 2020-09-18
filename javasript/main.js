@@ -93,3 +93,29 @@ aboutTab.addEventListener('click', showAbout);
 
 portfolioTab.addEventListener('click', toggleTab);
 contactTab.addEventListener('click', toggleTab);
+
+// Show browser icons on hover
+
+const browserDots = document.getElementsByClassName('browser-dot');
+const browserIcons = document.getElementsByClassName('browser-icon');
+
+const showIconsOnHover = () => {
+  for (icon of browserIcons) {
+    if ((icon.style.display = 'none')) {
+      console.log('hello');
+      icon.style.display = '';
+    }
+  }
+};
+
+const hideIconsOnHover = () => {
+  for (icon of browserIcons) {
+    console.log('bye');
+    icon.style.display = 'none';
+  }
+};
+
+for (dot of browserDots) {
+  dot.addEventListener('mouseover', showIconsOnHover);
+  dot.addEventListener('mouseleave', hideIconsOnHover);
+}
