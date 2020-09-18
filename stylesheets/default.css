@@ -5,6 +5,7 @@
   --navColor: #9e9e9e;
   --activeTab: #eaf5ff;
   --inactiveTab: #eed47c;
+  --highlightColor: #fd5e53;
 
   --borderColor: #131313;
   --secondaryBorderColor: #17a2b8;
@@ -13,7 +14,7 @@
   --mainText: #000;
   --secondaryText: #4b5156;
 
-  --skillsText: #000;
+  --skillsText: #085fd4;
 
   --themeDotBorder: #24292e;
 
@@ -35,6 +36,7 @@
   --navColor: #000;
   --activeTab: #333333;
   --inactiveTab: #616161;
+  --highlightColor: #bb86fc;
 
   --borderColor: #616161;
   --secondaryBorderColor: #bb86fc;
@@ -163,6 +165,12 @@ h6 {
   text-align: center;
   align-content: center;
   min-height: 20em;
+}
+
+#my-name {
+  color: var(--highlightColor);
+  font-weight: bold;
+  font-size: 64px;
 }
 
 .intro-wrapper {
