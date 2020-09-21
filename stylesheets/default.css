@@ -380,6 +380,11 @@ input:checked + .slider:before {
   padding-bottom: 50px;
 }
 
+.tab-left-column {
+  display: flex;
+  flex-direction: column;
+}
+
 #profile-pic {
   display: block;
   margin: 0 auto;

@@ -53,8 +53,12 @@ const aboutLeft = document.getElementById('about-left');
 const aboutRight = document.getElementById('about-right');
 
 const portfolioTab = document.getElementById('portfolio-tab');
+const portfolioLeft = document.getElementById('portfolio-left');
+const portfolioRight = document.getElementById('portfolio-right');
 
 const contactTab = document.getElementById('contact-tab');
+const contactLeft = document.getElementById('contact-left');
+const contactRight = document.getElementById('contact-right');
 
 const toggleTab = (event) => {
   for (let tab of tabs) {
@@ -72,6 +76,10 @@ const showSummary = (event) => {
     summaryRight.style.display = '';
     aboutLeft.style.display = 'none';
     aboutRight.style.display = 'none';
+    portfolioLeft.style.display = 'none';
+    portfolioRight.style.display = 'none';
+    contactLeft.style.display = 'none';
+    contactRight.style.display = 'none';
   }
 };
 
@@ -82,6 +90,38 @@ const showAbout = (event) => {
     summaryRight.style.display = 'none';
     aboutLeft.style.display = '';
     aboutRight.style.display = '';
+    portfolioLeft.style.display = 'none';
+    portfolioRight.style.display = 'none';
+    contactLeft.style.display = 'none';
+    contactRight.style.display = 'none';
+  }
+};
+
+const showPortfolio = (event) => {
+  console.log(event.target);
+  if (event.target.classList.contains('active')) {
+    summaryLeft.style.display = 'none';
+    summaryRight.style.display = 'none';
+    aboutLeft.style.display = 'none';
+    aboutRight.style.display = 'none';
+    portfolioLeft.style.display = '';
+    portfolioRight.style.display = '';
+    contactLeft.style.display = 'none';
+    contactRight.style.display = 'none';
+  }
+};
+
+const showContact = (event) => {
+  console.log(event.target);
+  if (event.target.classList.contains('active')) {
+    summaryLeft.style.display = 'none';
+    summaryRight.style.display = 'none';
+    aboutLeft.style.display = 'none';
+    aboutRight.style.display = 'none';
+    portfolioLeft.style.display = 'none';
+    portfolioRight.style.display = 'none';
+    contactLeft.style.display = '';
+    contactRight.style.display = '';
   }
 };
 
@@ -92,7 +132,10 @@ aboutTab.addEventListener('click', toggleTab);
 aboutTab.addEventListener('click', showAbout);
 
 portfolioTab.addEventListener('click', toggleTab);
+portfolioTab.addEventListener('click', showPortfolio);
+
 contactTab.addEventListener('click', toggleTab);
+contactTab.addEventListener('click', showContact);
 
 // Show browser icons on hover
 
