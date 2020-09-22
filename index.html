@@ -17,6 +17,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <meta http-equiv="Cache-Control" content="max-age=200" />
+
 </head>
 <body>
 
@@ -56,7 +58,7 @@
         </div>
 
         <div id="summary-left" class="left-column" style="">
-          <img id="profile-pic" src="./images/Juan-Estrella-SD.jpeg">
+          <img id="profile-pic" src="./images/Juan-Estrella-SD.jpeg" atl="a picture of me">
         </div>
 
         <div id="summary-right" class="right-column" style="">
@@ -175,8 +177,8 @@
             <h3 class="find-me">Find me on</h3>
             <h3 class="find-me">GitHub & LinkedIn</h3>
             <div class="social-icons-wrapper">
-              <a id="github-link" class="social-icons" target="_blank" href="https://github.com/TheJuanAndOnly99"><i class="fab fa-github" style="font-size: 56px; color: white;"></i></a>
-              <a id="linkedin-link" class="social-icons" target="_blank" href="https://www.linkedin.com/in/juaniestrella/"><i class="fab fa-linkedin-in" style="font-size: 56px;"></i></a>
+              <a id="github-link" class="social-icons" target="_blank" href="https://github.com/TheJuanAndOnly99"><span class="sr-only">Visit https://github.com/TheJuanAndOnly99</span><i class="fab fa-github" style="font-size: 56px; color: white;"></i></a>
+              <a id="linkedin-link" class="social-icons" target="_blank" href="https://www.linkedin.com/in/juaniestrella/"><span class="sr-only">Visit https://www.linkedin.com/in/juaniestrella/</span><i class="fab fa-linkedin-in" style="font-size: 56px;"></i></a>
             </div>
             <p>Email me directly at:</p>
             <p>juan.estrella137@gmail.com</p>
@@ -196,7 +198,7 @@
 
         <div>
           <div class="post">
-            <img class="thumbnail" src="./images/Vamos-White.png">
+            <img class="thumbnail" src="./images/Vamos-White.png" alt="Vamos Barcelona logo">
             <div class="post-preview">
               <h6 class="post-title">Vamos Barcelona</h6>
               <p class="post-intro">Ruby on Rails app.</p>
@@ -207,7 +209,7 @@
 
         <div>
           <div class="post">
-            <img class="thumbnail" src="./images/cover.png">
+            <img class="thumbnail" src="./images/cover.png" alt="Quedem logo">
             <div class="post-preview">
               <h6 class="post-title">Quedem</h6>
               <p class="post-intro">Ruby on Rails app.</p>
@@ -218,7 +220,7 @@
 
         <div>
           <div class="post">
-            <img class="thumbnail" src="./images/logo.png">
+            <img class="thumbnail" src="./images/logo.png" alt="Le Wagon logo">
             <div class="post-preview">
               <h6 class="post-title">Le Wagon</h6>
               <p class="post-intro">Bootcamp</p>
@@ -235,16 +237,16 @@
       <h3 style="text-align: center;">Get in touch</h3>
       <form id="contact-form">
         <label>Name</label>
-        <input class="input-field" type="text" name="name">
+        <input class="input-field" type="text" name="name" label="name">
 
         <label>Subject</label>
-        <input class="input-field" type="text" name="subject">
+        <input class="input-field" type="text" name="subject" label="subject">
 
         <label>Email</label>
-        <input class="input-field" type="text" name="email">
+        <input class="input-field" type="text" name="email" label="Email">
 
         <label>Message</label>
-        <textarea class="input-field" name="message"></textarea>
+        <textarea class="input-field" name="message" label="message "></textarea>
 
         <input id="submit-btn" type="submit" value="Send" style="font-weight: bold;">
       </form>
@@ -252,5 +254,5 @@
   </section>
   
 </body>
-<script src="./javasript/main.js"></script>
+<script src="./javascript/main.js"></script>
 </html>
