@@ -614,6 +614,19 @@ input:checked + .slider:before {
   border: none;
 }
 
+/* Footer */
+
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 24px;
+  background-color: var(--navColor);
+  border-top: var(--borderColor);
+}
+
 /* Media Queries  */
 
 @media screen and (max-width: 1200px) {

@@ -134,7 +134,7 @@ aboutTab.addEventListener('click', showAbout);
 portfolioTab.addEventListener('click', toggleTab);
 portfolioTab.addEventListener('click', showPortfolio);
 
-contactTab.addEventListener('click', toggleTab);
+contactTab.addEventListener('click', toggleTab); 
 contactTab.addEventListener('click', showContact);
 
 // Show browser icons on hover
