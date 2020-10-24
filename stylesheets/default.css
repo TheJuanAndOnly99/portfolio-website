@@ -622,9 +622,23 @@ input:checked + .slider:before {
   bottom: 0px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 12px 24px;
   background-color: var(--navColor);
   border-top: var(--borderColor);
+}
+
+.footer-link {
+  margin: 0 24px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  border: white 1px solid;
+  object-fit: cover;
 }
 
 /* Media Queries  */
