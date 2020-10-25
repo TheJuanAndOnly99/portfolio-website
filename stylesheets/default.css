@@ -129,6 +129,12 @@ h6 {
   font-size: 16px;
 }
 
+#header {
+  padding: 12px 24px;
+  background-color: var(--borderColor);
+  display: none;
+}
+
 .s1 {
   background-color: var(--mainColor);
   border-bottom: 1px solid var(--borderColor);
