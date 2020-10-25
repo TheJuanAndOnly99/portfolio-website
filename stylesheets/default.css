@@ -645,6 +645,58 @@ input:checked + .slider:before {
   height: 22px;
   border: white 1px solid;
   object-fit: cover;
+  object-position: 80% 20%;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+/* Profile pic popup */
+
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.popup-avatar {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: white 1px solid;
+  object-fit: cover;
+  object-position: 80% 20%;
+}
+
+/* Toggle this class - hide and show the popup */
+
+/* .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+} */
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Media Queries  */
