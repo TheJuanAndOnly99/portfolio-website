@@ -38,6 +38,5 @@ body[0].addEventListener('click', hidePopup);
 // Close Popup of large profile pic when scrolling
 
 window.onscroll = function() {
-  console.log('hello');
   popupContainer[0].style.display = 'none';
 };

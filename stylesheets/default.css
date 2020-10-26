@@ -130,9 +130,32 @@ h6 {
 }
 
 #header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 12px 24px;
-  background-color: var(--borderColor);
-  display: none;
+  background-color: var(--navColor);
+  border-top: var(--borderColor);
+  z-index: 1;
+}
+
+.header-text {
+  color: var(--mainText);
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px 4px;
+}
+
+.header-keywords {
+  margin-left: 30px;
+}
+
+.header-email {
+  margin-right: 32px;
 }
 
 .s1 {
