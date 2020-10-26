@@ -1,4 +1,4 @@
-// Open Popup large profile pic image when clicking small avatar on footer
+// Open Popup of large profile pic image when clicking small avatar on footer
 
 const popupLink = document.getElementById('click-popup');
 const popupContainer = document.getElementsByClassName('popup-container');
@@ -17,7 +17,7 @@ const showPopup = (event) => {
 
 popupLink.addEventListener('click', showPopup);
 
-// Close Popup large profile pic image when clicking anywhere on screen
+// Close Popup of large profile pic image when clicking anywhere on screen
 
 const body = document.getElementsByTagName('body');
 
@@ -34,3 +34,10 @@ const hidePopup = (event) => {
 };
 
 body[0].addEventListener('click', hidePopup);
+
+// Close Popup of large profile pic when scrolling
+
+window.onscroll = function() {
+  console.log('hello');
+  popupContainer[0].style.display = 'none';
+};
