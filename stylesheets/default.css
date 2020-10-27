@@ -421,7 +421,7 @@ input:checked + .slider:before {
   height: 200px;
   width: 200px;
   object-fit: cover;
-  object-position: 80% 20%;
+  object-position: 80% 15%;
   border: 2px solid var(--borderColor);
 }
 
@@ -664,11 +664,11 @@ input:checked + .slider:before {
 
 .avatar {
   border-radius: 50%;
-  width: 22px;
-  height: 22px;
+  width: 1.5em;
+  height: 1.5em;
   border: white 1px solid;
   object-fit: cover;
-  object-position: 80% 20%;
+  object-position: 80% 15%;
 }
 
 .avatar:hover {
@@ -686,12 +686,12 @@ input:checked + .slider:before {
 }
 
 .popup-avatar {
-  height: 400px;
-  width: 400px;
+  height: 24em;
+  width: 24em;
   border-radius: 50%;
   border: white 1px solid;
   object-fit: cover;
-  object-position: 80% 20%;
+  object-position: 80% 15%;
 }
 
 /* Toggle this class - hide and show the popup */
